@@ -3,7 +3,7 @@
 }
 
 .trainingGroup + .trainingGroup {
-  margin-top: 10px;
+  padding-top: 10px;
   border-top: 1px solid #e6e5e5;
 }
 
