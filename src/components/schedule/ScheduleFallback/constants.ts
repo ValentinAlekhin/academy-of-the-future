@@ -1,0 +1,1 @@
+export const DATE_PLACEHOLDER_COUNT = 14;

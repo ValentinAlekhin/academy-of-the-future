@@ -1,0 +1,60 @@
+.wrapper {
+  position: absolute;
+  z-index: 2;
+  top: 147px;
+  right: 12px;
+}
+
+.badge {
+  display: grid;
+  min-width: 80px;
+  height: 34px;
+  padding: 0 10px;
+  place-items: center;
+  border: 1px dashed #dedce1;
+  border-radius: 7px;
+  background: #fff;
+  color: #29282d;
+  font: inherit;
+  font-size: 13px;
+  font-style: italic;
+  font-weight: 900;
+  cursor: pointer;
+}
+
+.popover {
+  position: absolute;
+  top: 41px;
+  right: 0;
+  width: 212px;
+  padding: 11px 13px;
+  border: 1px solid #e5e3e8;
+  border-radius: 10px;
+  background: #fff;
+  color: #29282d;
+  font-size: 11px;
+  box-shadow: 0 10px 25px rgba(39, 36, 45, 0.14);
+}
+
+.popover > span {
+  display: block;
+  margin-bottom: 8px;
+  color: #6b6970;
+}
+
+.popover div {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 12px;
+}
+
+.popover strong {
+  text-align: right;
+}
+
+@media (max-width: 480px) {
+  .wrapper {
+    top: 165px;
+  }
+}

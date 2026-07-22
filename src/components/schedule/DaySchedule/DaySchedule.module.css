@@ -1,0 +1,56 @@
+.list {
+  margin-top: 12px;
+}
+
+.emptyState {
+  display: grid;
+  min-height: 274px;
+  place-items: center;
+  place-content: center;
+  margin: 0 20px;
+  padding: 40px 20px;
+  border: 1px dashed #d8d4df;
+  border-radius: 14px;
+  background: #fff;
+  text-align: center;
+}
+
+.emptyState > span {
+  display: grid;
+  width: 48px;
+  height: 48px;
+  place-items: center;
+  border-radius: 50%;
+  background: var(--accent-soft);
+  color: var(--accent);
+  font-size: 30px;
+}
+
+.emptyState h2 {
+  margin: 15px 0 6px;
+  font-size: 17px;
+}
+
+.emptyState p {
+  margin: 0;
+  color: var(--muted);
+  font-size: 12px;
+}
+
+.emptyState button {
+  margin-top: 17px;
+  padding: 9px 15px;
+  border: 1px solid #d8d1ef;
+  border-radius: 999px;
+  background: white;
+  color: var(--accent-dark);
+  font-size: 11px;
+  font-weight: 800;
+  cursor: pointer;
+}
+
+@media (max-width: 700px) {
+  .emptyState {
+    margin-inline: 0;
+  }
+}

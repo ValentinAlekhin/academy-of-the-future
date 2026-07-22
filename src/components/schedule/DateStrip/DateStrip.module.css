@@ -1,0 +1,141 @@
+.dateScroller {
+  display: grid;
+  grid-auto-columns: 52px;
+  grid-auto-flow: column;
+  justify-content: space-between;
+  gap: 8px;
+  overflow-x: auto;
+  padding: 0 0 13px;
+  scrollbar-color: #cbc9cc transparent;
+  scrollbar-width: thin;
+}
+
+.dateScroller::-webkit-scrollbar {
+  height: 8px;
+}
+
+.dateScroller::-webkit-scrollbar-track {
+  border-radius: 99px;
+  background: #e6e5e5;
+}
+
+.dateScroller::-webkit-scrollbar-thumb {
+  border-radius: 99px;
+  background: #c9c7c9;
+}
+
+.dateCell {
+  display: grid;
+  grid-template-rows: 15px 51px;
+  gap: 4px;
+  min-width: 52px;
+}
+
+.weekday {
+  color: #aaa9ae;
+  font-size: 10px;
+  font-weight: 700;
+  line-height: 15px;
+  text-align: center;
+  text-transform: uppercase;
+}
+
+.dateItem {
+  position: relative;
+  width: 52px;
+  height: 51px;
+  overflow: hidden;
+  padding: 0;
+  border: 1px solid #dedde0;
+  border-radius: 7px;
+  background: #fff;
+  color: #202024;
+  cursor: pointer;
+  transition:
+    border-color 140ms ease,
+    transform 140ms ease;
+}
+
+.dateItem:hover {
+  transform: translateY(-1px);
+  border-color: #a998dd;
+}
+
+.dateItem:focus-visible {
+  outline: none;
+}
+
+.month {
+  display: block;
+  height: 18px;
+  padding-top: 2px;
+  background: #202024;
+  color: white;
+  font-size: 10px;
+  font-style: italic;
+  font-weight: 900;
+  line-height: 16px;
+  text-transform: uppercase;
+}
+
+.dateItem strong {
+  display: block;
+  height: 31px;
+  font-size: 19px;
+  font-style: italic;
+  font-weight: 800;
+  line-height: 31px;
+}
+
+.dateItem i {
+  position: absolute;
+  right: 4px;
+  bottom: 4px;
+  width: 3px;
+  height: 3px;
+  border-radius: 50%;
+  background: var(--accent);
+}
+
+.dateItemSelected {
+  border-color: var(--accent);
+  background: var(--accent);
+  color: white;
+}
+
+.dateItemSelected .month {
+  background: #202024;
+}
+
+.dateItemSelected i {
+  background: white;
+}
+
+@media (max-width: 700px) {
+  .dateScroller {
+    grid-auto-columns: 44px;
+    justify-content: start;
+    gap: 12px;
+    padding-bottom: 12px;
+  }
+
+  .dateCell {
+    width: 44px;
+    min-width: 44px;
+    gap: 6px;
+  }
+
+  .weekday {
+    width: 44px;
+  }
+
+  .dateItem {
+    margin-left: -4px;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .dateItem {
+    transition: none;
+  }
+}

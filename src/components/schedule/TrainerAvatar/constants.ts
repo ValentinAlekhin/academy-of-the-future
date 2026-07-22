@@ -1,0 +1,1 @@
+export const DEFAULT_TRAINER_INITIALS = "PH";

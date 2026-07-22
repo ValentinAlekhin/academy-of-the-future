@@ -1,0 +1,54 @@
+:root {
+  --background: #f3f3f0;
+  --surface: #ffffff;
+  --text: #222128;
+  --muted: #85858e;
+  --line: #e9e9e5;
+  --accent: #8058f4;
+  --accent-dark: #6d43e6;
+  --accent-soft: #eee9ff;
+  --black: #202024;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+html {
+  background: var(--background);
+  color-scheme: light;
+}
+
+body {
+  margin: 0;
+  min-width: 320px;
+  background:
+    radial-gradient(circle at 15% 0%, rgba(120, 80, 255, 0.08), transparent 27rem),
+    var(--background);
+  color: var(--text);
+  font-family: Inter, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+  -webkit-font-smoothing: antialiased;
+}
+
+button,
+select {
+  font: inherit;
+}
+
+button,
+a,
+select {
+  -webkit-tap-highlight-color: transparent;
+}
+
+button:focus-visible,
+a:focus-visible,
+select:focus-visible {
+  outline: 3px solid rgba(120, 80, 255, 0.32);
+  outline-offset: 2px;
+}
+
+::selection {
+  background: var(--accent-soft);
+  color: var(--accent-dark);
+}

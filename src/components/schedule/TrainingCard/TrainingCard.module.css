@@ -1,0 +1,234 @@
+.trainingGroup {
+  padding-bottom: 16px;
+}
+
+.trainingGroup + .trainingGroup {
+  margin-top: 10px;
+  border-top: 1px solid #e6e5e5;
+}
+
+.trainerRow {
+  display: flex;
+  align-items: center;
+  min-height: 36px;
+  padding: 0 20px 10px;
+}
+
+.trainerName,
+.trainerStation {
+  margin: 0;
+}
+
+.trainerName {
+  color: #29282d;
+  font-size: 14px;
+  font-weight: 800;
+  line-height: 17px;
+}
+
+.trainerStation {
+  margin-top: 1px;
+  color: #aaa9ae;
+  font-size: 10px;
+  line-height: 13px;
+}
+
+.more {
+  margin-left: auto;
+  align-self: flex-start;
+  color: #aaa9ae;
+}
+
+.card {
+  position: relative;
+  min-height: 274px;
+  margin: 0 20px;
+  padding: 14px 12px 12px;
+  border: 1px solid #efeeee;
+  border-radius: 14px;
+  background: #fff;
+  box-shadow: 0 10px 24px rgba(39, 36, 45, 0.055);
+}
+
+.typeBadge {
+  display: inline-flex;
+  gap: 4px;
+  min-height: 22px;
+  align-items: center;
+  padding: 4px 9px;
+  border-radius: 999px;
+  background: #ecf7ff;
+  color: #2d9bd2;
+  font-size: 10px;
+  font-weight: 800;
+}
+
+.card h2 {
+  max-width: calc(100% - 72px);
+  margin: 9px 0;
+  color: #27262c;
+  font-size: 18px;
+  line-height: 1.2;
+  letter-spacing: -0.01em;
+}
+
+.dateBadge {
+  position: absolute;
+  top: 14px;
+  right: 12px;
+  display: grid;
+  width: 44px;
+  height: 48px;
+  place-content: center;
+  border-radius: 10px;
+  background: #fff;
+  text-align: center;
+  box-shadow: 0 7px 21px rgba(68, 58, 90, 0.1);
+}
+
+.dateBadge strong {
+  color: #242329;
+  font-size: 20px;
+  line-height: 21px;
+}
+
+.dateBadge span {
+  color: var(--accent);
+  font-size: 9px;
+  font-weight: 900;
+  line-height: 12px;
+  text-transform: uppercase;
+}
+
+.details {
+  display: grid;
+  gap: 7px;
+  max-width: calc(100% - 80px);
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+.details li {
+  display: flex;
+  align-items: center;
+  gap: 7px;
+  color: #66656d;
+  font-size: 11px;
+  line-height: 16px;
+}
+
+.details li > svg {
+  width: 11px;
+  height: 11px;
+  flex: 0 0 11px;
+  color: #99989f;
+}
+
+.capacity {
+  margin-top: 52px;
+}
+
+.progressTrack {
+  display: flex;
+  gap: 2px;
+  height: 4px;
+  border-radius: 1px;
+}
+
+.progressTrack span {
+  min-width: 0;
+  flex: 1;
+  height: 100%;
+}
+
+.slotOccupied {
+  background: #8058f4;
+}
+
+.slotAvailable {
+  background: #e5e3e8;
+}
+
+.capacityLabels {
+  display: flex;
+  justify-content: space-between;
+  gap: 12px;
+  margin-top: 6px;
+  color: #aaa9ae;
+  font-size: 10px;
+  line-height: 12px;
+}
+
+.capacityLabels strong {
+  color: #5f5e65;
+}
+
+.spotsAvailable {
+  color: #615877;
+}
+
+.spotsFull {
+  color: #7a7171;
+}
+
+.cardFooter {
+  display: flex;
+  align-items: center;
+  gap: 20px;
+  min-height: 36px;
+  margin-top: 12px;
+}
+
+.cardFooter > span {
+  flex: 1;
+  overflow: hidden;
+  color: #9998a0;
+  font-size: 10px;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+
+.cardFooter button {
+  width: 156px;
+  height: 34px;
+  border: 0;
+  border-radius: 999px;
+  background: linear-gradient(135deg, #8b61ff, #7046ed);
+  color: white;
+  font-size: 12px;
+  font-style: italic;
+  font-weight: 800;
+  cursor: not-allowed;
+  box-shadow: 0 8px 16px rgba(120, 80, 255, 0.22);
+}
+
+@media (max-width: 480px) {
+  .card {
+    min-height: 294px;
+  }
+
+  .details {
+    max-width: 100%;
+  }
+
+  .card h2 {
+    max-width: calc(100% - 50px);
+  }
+
+  .capacity {
+    position: absolute;
+    top: 209px;
+    right: 12px;
+    left: 12px;
+    margin-top: 0;
+  }
+
+  .cardFooter {
+    position: absolute;
+    right: 12px;
+    bottom: 12px;
+    left: 12px;
+    margin-top: 0;
+  }
+}

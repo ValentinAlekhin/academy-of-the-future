@@ -1,0 +1,88 @@
+.filters {
+  position: relative;
+  display: grid;
+  grid-template-columns: minmax(250px, 1fr) minmax(250px, 1fr) 44px;
+  gap: 10px;
+  margin-top: 13px;
+}
+
+.filters label {
+  display: grid;
+  grid-template-columns: auto minmax(0, 1fr);
+  align-items: center;
+  gap: 12px;
+  height: 44px;
+  padding: 0 12px;
+  border: 1px solid #dad9dc;
+  border-radius: 12px;
+  background: white;
+}
+
+.filters label > span {
+  color: #8a8990;
+  font-size: 10px;
+  font-weight: 700;
+}
+
+.filters select {
+  width: 100%;
+  min-width: 0;
+  border: 0;
+  outline: 0;
+  background: transparent;
+  color: #29282d;
+  font-size: 12px;
+  font-weight: 700;
+  cursor: pointer;
+}
+
+.filters select:disabled {
+  color: #29282d;
+  cursor: default;
+  opacity: 1;
+}
+
+.refreshButton {
+  display: grid;
+  place-items: center;
+  width: 44px;
+  height: 44px;
+  border: 1px solid #dad9dc;
+  border-radius: 12px;
+  background: white;
+  color: #202024;
+  font-size: 21px;
+  line-height: 1;
+  cursor: pointer;
+}
+
+.resultSummary {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  overflow: hidden;
+  clip: rect(0 0 0 0);
+  clip-path: inset(50%);
+  white-space: nowrap;
+}
+
+@media (max-width: 700px) {
+  .filters {
+    grid-template-columns: minmax(0, 1fr) minmax(0, 1fr) 44px;
+    gap: 8px;
+    margin-top: 10px;
+  }
+
+  .filters label {
+    grid-template-columns: minmax(0, 1fr);
+    grid-template-rows: 14px 18px;
+    align-content: center;
+    gap: 2px;
+    height: 50px;
+    padding: 0 10px;
+  }
+
+  .refreshButton {
+    height: 50px;
+  }
+}

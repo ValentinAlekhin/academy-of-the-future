@@ -1,0 +1,86 @@
+.page {
+  width: min(100%, 936px);
+  min-height: 100vh;
+  margin: 0 auto;
+  padding: 16px 28px 40px;
+}
+
+.dates {
+  display: grid;
+  grid-template-columns: repeat(14, 52px);
+  justify-content: space-between;
+  gap: 8px;
+  overflow: hidden;
+  padding-bottom: 13px;
+}
+
+.dates span {
+  height: 70px;
+  border-radius: 7px;
+  background: #e8e7e5;
+}
+
+.filters {
+  display: grid;
+  grid-template-columns: 1fr 1fr 44px;
+  gap: 10px;
+  margin-top: 13px;
+}
+
+.filters span,
+.filters i {
+  height: 44px;
+  border-radius: 12px;
+  background: #e8e7e5;
+}
+
+.card {
+  height: 317px;
+  margin: 12px 20px 0;
+  border-radius: 14px;
+  background: #e8e7e5;
+}
+
+.dates span,
+.filters span,
+.filters i,
+.card {
+  animation: pulse 1.2s ease-in-out infinite alternate;
+}
+
+@keyframes pulse {
+  to {
+    background: #f0efed;
+  }
+}
+
+@media (max-width: 700px) {
+  .page {
+    padding: 14px 12px 30px;
+  }
+
+  .dates {
+    justify-content: start;
+  }
+
+  .filters {
+    grid-template-columns: 1fr 44px;
+  }
+
+  .filters span:first-child {
+    grid-column: 1 / -1;
+  }
+
+  .card {
+    margin-inline: 0;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .dates span,
+  .filters span,
+  .filters i,
+  .card {
+    animation: none;
+  }
+}
